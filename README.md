@@ -1,7 +1,23 @@
 # Description
 This is the code repository for the paper [Navigating Robot Swarm Through a Virtual Tube with Flow-Adaptive Distribution Control](arXiv: https://doi.org/10.48550/arXiv.2501.11938).
 # Structure
-<pre> ``` Root Directory/ ├── Numerical Simulation/ # Implementation of numerical simulations in the paper │ ├── main/ # Main simulation scripts │ │ ├── main1.m # Numerical simulation script 1 │ │ └── main2.m # Numerical simulation script 2 │ └── clean_utils/ # Auxiliary function folder │ └── [Necessary utility functions] # Provide components for main1.m and main2.m │ └── Robotarium Experiment/ # Implementation of Robotarium experiments in the paper ├── experiment_run_code/ # Custom experiment code │ ├── experiment_run_main.m # Main experiment script (run directly to view simulation results) │ ├── Tube_Data.mat # Tube data storage │ ├── ExperimentData.mat # Experimental data storage │ └── [Other utility functions] # Auxiliary functions for experiments │ ├── [Other subfolders] # Components downloaded from Robotarium platform └── [Other utility functions] # Experiment-related necessary functions ``` </pre>
+The repository structure is shown below:
+```text
+Root Directory/
+├── Numerical Simulation/          # Implementation of numerical simulations in the paper
+│   ├── main/                      # Main simulation scripts
+│   │   ├── main1.m                # Numerical simulation script 1
+│   │   └── main2.m                # Numerical simulation script 2
+│   └── clean_utils/               # Auxiliary function folder
+│       └── [Necessary utility functions]  # Provide components for main1.m and main2.m
+└── Robotarium Experiment/         # Implementation of Robotarium experiments in the paper
+    ├── experiment_run_code/       # Custom experiment code
+    │   ├── experiment_run_main.m  # Main experiment script (run directly to view simulation results)
+    │   ├── Tube_Data.mat          # Tube data storage
+    │   ├── ExperimentData.mat     # Experimental data storage
+    │   └── [Other utility functions]  # Auxiliary functions for the experiment
+    ├── [Other subfolders]          # Components downloaded from the Robotarium platform (e.g., utilities, patch_generation, etc.)
+    └── [Other utility functions]   # Experiment-related necessary functions
 # Structure Description
 This repository provides numerical simulations and Robotarium experiments in the paper, mainly divided into two core modules:
 ## Numerical Simulation Module
