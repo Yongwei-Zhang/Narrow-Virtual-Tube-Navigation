@@ -18,7 +18,7 @@ Root Directory/
     │   └── [Other utility functions]  # Auxiliary functions for the experiment
     ├── [Other subfolders]          # Components downloaded from the Robotarium platform (e.g., utilities, patch_generation, etc.)
     └── [Other utility functions]   # Experiment-related necessary functions
-```text
+```
 # Structure Description
 This repository provides numerical simulations and Robotarium experiments in the paper, mainly divided into two core modules:
 ## Numerical Simulation Module
