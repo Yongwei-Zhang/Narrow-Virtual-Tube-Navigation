@@ -3,7 +3,7 @@
 % - Plot the change of the minimum distance among robots,
 % - Plot the change of the minimum distance between robots and tube boundary;
 % - Plot the convergence error curve between the current density \rho and the desired density \rho_d;
-% - Plot the relative error \(\rho-\rho_d\) of the robot swarm in the occupied region.
+% - Plot the normalized relative error \(\rho-\rho_d\) of the robot swarm in the occupied region.
 
 %% create tube
 clc,clear
@@ -517,7 +517,7 @@ set(gca, 'FontSize', font_size)
 grid on
 hold off;
 
-%% plot relative density error in \mathcal{R}_O
+%% plot normalized relative density error in \mathcal{R}_O
 figure(); 
 plot(x, y, 'r--', 'LineWidth', 2)
 axis equal
@@ -543,6 +543,7 @@ for i = 1:numel(points)
     points_x(end+1) = points{i}(1);
     points_y(end+1) = points{i}(2);
 end
-scatter(points_x, points_y, 10, density_save-density_d_save, 'filled');
+% scatter(points_x, points_y, 10, density_save-density_d_save, 'filled'); % relative error
+scatter(points_x, points_y, 10, (density_save-density_d_save)./density_d_save, 'filled'); % normalized relative error
 colorbar;
 hold off;
