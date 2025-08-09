@@ -32,7 +32,7 @@ This module implements numerical simulations in the paper:
     - Plot the change of the minimum distance among robots,
     - Plot the change of the minimum distance between robots and tube boundary;
     - Plot the convergence error curve between the current density \rho and the desired density \rho_d;
-    - Plot the relative error \(\rho-\rho_d\) of the robot swarm in the occupied region.
+    - Plot the normalized relative error \(\frac{\rho-\rho_d}{\rho_d}\) of the robot swarm in the occupied region.
 - **clean_utils subfolder**: Defines necessary utility functions for numerical simulations, supporting for `main1.m` and `main2.m` to ensure modularity and reusability.
 ## Robotarium Experiment Module
 This module implements the Robotarium physical experiments (or platform simulations) in the paper:
