@@ -260,6 +260,14 @@ exist_num = []; % save robot numbers that are still in the tube
 count = 0;  % count the number of exited robots
 time_pass_save = []; % save time instant when exiting the tube
 
+% save robots' positions and corresponding time, to plot trajectories
+position_save_robot = cell(1,N);
+time_save_robot = cell(1,N);
+for i = 1:N
+    position_save_robot{i} = {};
+    time_save_robot{i} = [];
+end
+
 % variables for dealing with exited robots
 position_save_robot_leave = {}; 
 time_save_robot_leave = {};
