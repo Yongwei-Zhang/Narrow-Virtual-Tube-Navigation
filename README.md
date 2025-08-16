@@ -1,5 +1,6 @@
 # Description
 This is the code repository for the paper [Navigating Robot Swarm Through a Virtual Tube with Flow-Adaptive Distribution Control](arXiv: https://doi.org/10.48550/arXiv.2501.11938).
+
 # Structure
 The repository structure is shown below:
 ```text
@@ -10,15 +11,17 @@ Root Directory/
 │   │   └── main2.m                # Numerical simulation script 2
 │   └── clean_utils/               # Auxiliary function folder
 │       └── [Necessary utility functions]  # Provide components for main1.m and main2.m
-└── Robotarium Experiment/         # Implementation of Robotarium experiments in the paper
-    ├── experiment_run_code/       # Custom experiment code
-    │   ├── experiment_run_main.m  # Main experiment script (run directly to view simulation results)
-    │   ├── Tube_Data.mat          # Tube data storage
-    │   ├── ExperimentData.mat     # Experimental data storage
-    │   └── [Other utility functions]  # Auxiliary functions for the experiment
-    ├── [Other subfolders]          # Components downloaded from the Robotarium platform (e.g., utilities, patch_generation, etc.)
-    └── [Other utility functions]   # Experiment-related necessary functions
+├── Robotarium Experiment/         # Implementation of Robotarium experiments in the paper
+│   ├── experiment_run_code/       # Custom experiment code
+│   │   ├── experiment_run_main.m  # Main experiment script (run directly to view simulation results)
+│   │   ├── Tube_Data.mat          # Tube data storage
+│   │   ├── ExperimentData.mat     # Experimental data storage
+│   │   └── [Other utility functions]  # Auxiliary functions for the experiment
+│   ├── [Other subfolders]          # Components downloaded from the Robotarium platform (e.g., utilities, patch_generation, etc.)
+│   └── [Other utility functions]   # Experiment-related necessary functions
+└── Three Additional Simulation Scenarios/  # Three newly added simulation scenarios
 ```
+
 # Structure Description
 This repository provides numerical simulations and Robotarium experiments in the paper, mainly divided into two core modules:
 ## Numerical Simulation Module
@@ -53,3 +56,16 @@ To run `Robotarium Experiment/experiment_run_code/experiment_run_main.m`:
 - **Step 2**: After adding the path, directly run `experiment_run_main.m` in MATLAB to launch the Robotarium simulation and view the experiment results.
 ## Note
 Ensuring the correct folders are added to the MATLAB search path is critical for resolving dependencies and enabling smooth execution of all scripts.
+
+# Three additional simulation Scenarios
+## A-Curved Trapezoidal Tube:
+Features a wide entrance narrowing to a bottleneck mid-section before expanding again. This tests congestion management during funneling transitions where geometric constraints intensify.
+- After adding the folder to the MATLAB search path, you can directly run `Trapezoidal.m` to obtain the simulation results of the robot swarm under the controller \(\mathbf{v}_i\). If \(k4 = 0\) is set, the simulation results under the controller \(\mathbf{w}_i\) can be obtained.
+- The "Comparative simulation results" subfolder stores comparison pictures of simulation results under the two controllers, as well as comparison pictures of AMD (Average Minimum Distance).
+- The structures of the other two simulation experiments are similar.
+## B-Annular Tube with Narrow Section:
+Implements a circular path with curvature constraints and an integrated bottleneck (at the horizontal rightmost end). This validates performance in continuous curved environments.
+- After adding the folder to the MATLAB search path, you can directly run `Annular.m` to obtain the simulation results.
+## C-General V-Shaped Tube:
+Contains no narrow sections but has significant width variations. This confirms our method's ability to regulate swarm distribution according to tube geometry even without strict bottlenecks.
+- After adding the folder to the MATLAB search path, you can directly run ``V_shaped.m` to obtain the simulation results.
