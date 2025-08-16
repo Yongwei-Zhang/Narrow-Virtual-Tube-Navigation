@@ -20,6 +20,9 @@ Root Directory/
 │   ├── [Other subfolders]          # Components downloaded from the Robotarium platform (e.g., utilities, patch_generation, etc.)
 │   └── [Other utility functions]   # Experiment-related necessary functions
 └── Three Additional Simulation Scenarios/  # Three newly added simulation scenarios
+    ├── A-Curved trapezoidal Tube   # Scenario A: Curved trapezoidal Tube 
+    ├── B-Annular Tube with Narrow Section  # Scenario B: Annular Tube with Narrow Section
+    └── C-General V-Shaped Tube     # Scenario C: General V-Shaped Tube
 ```
 
 # Structure Description
@@ -68,4 +71,4 @@ Implements a circular path with curvature constraints and an integrated bottlene
 - After adding the folder to the MATLAB search path, you can directly run `Annular.m` to obtain the simulation results.
 ## C-General V-Shaped Tube:
 Contains no narrow sections but has significant width variations. This confirms our method's ability to regulate swarm distribution according to tube geometry even without strict bottlenecks.
-- After adding the folder to the MATLAB search path, you can directly run ``V_shaped.m` to obtain the simulation results.
+- After adding the folder to the MATLAB search path, you can directly run `V_shaped.m` to obtain the simulation results.
